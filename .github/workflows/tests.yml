@@ -38,3 +38,7 @@ jobs:
         run: npm test
         env:
           MONGODB_URI: mongodb://127.0.0.1:27017/gestao-de-alunos-test
+          ADMIN_EMAIL: admin@escola.com
+          ADMIN_SENHA: admin123
+          ALUNO_EMAIL: aluno.teste@example.com
+          ALUNO_SENHA: 123456

@@ -2,6 +2,7 @@
   {
     "nome": "Aluno Teste",
     "email": "aluno.teste@example.com",
+    "matricula": "MAT001",
     "senha": "123456"
   }
 ]

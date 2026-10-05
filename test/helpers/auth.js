@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import request from 'supertest';
 import app from '../../src/app.js';
 
@@ -5,14 +6,14 @@ export async function loginAdmin() {
     const resposta = await request(app)
         .post('/api/auth/login')
         .send({
-            email: 'admin@escola.com',
-            senha: 'admin123'
+            email: process.env.ADMIN_EMAIL,
+            senha: process.env.ADMIN_SENHA
         });
 
     return resposta.body.token;
 }
 
-export async function loginUser(email, senha) {
+export async function loginUser(email = process.env.ALUNO_EMAIL, senha = process.env.ALUNO_SENHA) {
     const resposta = await request(app)
         .post('/api/auth/login')
         .send({
