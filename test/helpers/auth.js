@@ -11,3 +11,14 @@ export async function loginAdmin() {
 
     return resposta.body.token;
 }
+
+export async function loginUser(email, senha) {
+    const resposta = await request(app)
+        .post('/api/auth/login')
+        .send({
+            email,
+            senha
+        });
+
+    return resposta.body.token;
+}
