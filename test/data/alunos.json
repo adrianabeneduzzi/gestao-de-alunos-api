@@ -1,1 +1,7 @@
-
+[
+  {
+    "nome": "Aluno Teste",
+    "email": "aluno.teste@example.com",
+    "senha": "123456"
+  }
+]
